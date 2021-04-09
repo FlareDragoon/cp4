@@ -1,12 +1,12 @@
 <template>
 <div>
-  <div class="wrapper">
+  <!-- <div class="wrapper">
     <div class="search">
       <form class="pure-form">
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>
-  </div>
+  </div> -->
   <!-- <p v-if="this.$root.$data.books.length === 0">Your bookshelf is empty.</p> -->
   
 <div class="wrapper">

@@ -72,7 +72,8 @@
         <p></p>
         <input v-model="findItem.genre">
         <div class="suggestions" v-if="genreSuggestions.length > 0">
-        <div class="suggestion" v-for="s in genreSuggestions" :key="s.id" @click="selectGenre(s)">{{s.genreName}}</div>
+        <div class="suggestion" v-for="s in genreSuggestions" :key="s.id" @click="selectGenreFind(s)">{{s.genreName}}</div>
+          </div>
 
         <img :src="findItem.path" />
       </div>
@@ -276,6 +277,11 @@ label {
     },
     selectGenre(genre) {
       this.genre = genre.genreName;
+      this.findGenreName = "";
+      this.findGenreItem = genre;
+    },
+    selectGenreFind(genre) {
+      this.findItem.genre = genre.genreName;
       this.findGenreName = "";
       this.findGenreItem = genre;
     },
