@@ -12,11 +12,7 @@
       <br>
       <button @click="createGenre">Add</button>
 
-
     </div>
-
-
-
 
     <div class="heading">
       <div class="circle">2</div>
@@ -75,6 +71,8 @@
         <input v-model="findItem.author">
         <p></p>
         <input v-model="findItem.genre">
+        <div class="suggestions" v-if="genreSuggestions.length > 0">
+        <div class="suggestion" v-for="s in genreSuggestions" :key="s.id" @click="selectGenre(s)">{{s.genreName}}</div>
 
         <img :src="findItem.path" />
       </div>
